@@ -1,0 +1,178 @@
+@import "../../style/textStyle.wxss";
+@import "../../utils/iconfont.wxss";
+
+.rootViewClass{
+  overflow-x: hidden;
+}
+
+.noshow{
+  display: none;
+}
+.hanziImage{
+  width:100px;
+  height:100px;
+}
+
+.discription{
+  font-size:20px;
+  display: flex;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right:20px; 
+}
+
+.testContentP{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leftPart{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+.rightPart{
+  display: flex;
+}
+.hanziWordCard{
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 10px;
+  padding-top:  10px;
+  border-top: #e5e5e5 solid 1px;
+}
+
+.tijiao_button{
+  margin-top: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
+  
+}
+
+.scroll_box{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+.item_list{
+  width: 600rpx;
+  height: 300rpx;
+  margin: 30rpx 0 50rpx 80rpx;
+  border-radius: 4.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.item_list:last-child {
+  margin-right: 6.5%;
+}
+.item_list image {
+  width: 100%;
+  height: 152rpx;
+}
+.item_list_buttom {
+  flex: 1;
+  padding: 20rpx 46rpx;
+  background-color: #ffffff;
+}
+.item_list_buttom_text{
+  white-space: normal;
+  /* margin-top: 20rpx; */
+  font-size:29rpx;
+}
+
+.item_list_buttom_foot{
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.listText {
+  display: inline-block;
+  width: 228rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.storyList{
+  position: absolute;
+  top: 480rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 88%;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);  
+}
+
+
+.scrollView {
+  position: absolute;
+  bottom: 0;
+  top: 96rpx;
+  overflow: hidden;
+}
+.storyList .Head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 96rpx;
+  border-bottom: 1px solid #e5e5e5; 
+}
+.storyList .Head .headLeft{
+  margin-left: 40rpx;
+}
+.storyList .Head .headRight{
+  color: #02ad58;
+  margin-right: 40rpx;
+}
+.storyList .story{
+  display: flex;
+  align-items: center;
+  height: 180rpx;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 3%; 
+}
+.storyList .story view {
+  margin: 0 32rpx;
+  font-size: 30rpx;
+  font: medium;
+  line-height: 46rpx;
+}
+
+.storyList .story image {
+  flex: 0 0 180rpx;
+  width: 180rpx;
+  height: 120rpx;
+  margin-left: 28rpx;
+  border-radius: 4px;
+}
+
+.icon-right {
+  font-size: 26rpx; 
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.text-h2{
+  font-size:32rpx;
+  color:black;
+  font-weight:bolder;
+}
+.text_price{
+  font-size:42rpx;
+  text-align: right;
+  color:tomato;
+  margin-top: 20rpx;
+}
+.item_image{
+  height: 50rpx;
+}

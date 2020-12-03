@@ -1,0 +1,101 @@
+@import "../../style/textStyle.wxss";
+@import "../../utils/iconfont.wxss";
+
+
+.waitTextClass{
+  text-align:center;
+  font-size:27px;
+
+}
+
+.waitTextCenter{
+  margin-top: 20px;
+}
+
+.genButton{
+  color:#FFFFFF;
+background-color:#1AAD19;
+width:99%;
+
+}
+
+.shareCanvasClass{
+  display: none;
+}
+.imageLikeClassTest {
+  fill: rgb(18, 136, 222);
+}
+
+.noshow {
+  display: none;
+}
+
+.hanziImage {
+  width: 100px;
+  height: 100px;
+}
+
+.commonBar {
+  /* margin-left: 25px; *//* margin-right: 25px; */
+  height: 100%；;
+}
+
+.imageLikeClass {
+  width: 100px;
+  height: 100px;
+}
+
+.waitViewClass{
+  display: flex;
+    flex-direction: row;
+    justify-content:center; 
+}
+.waitViewClass image {
+  width:200rpx;
+}
+
+
+
+
+.barTitle {
+  /* font-size: 20px; */
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.SuoYinContent .commonBar {
+  padding-left: 22px;
+  padding-right: 22px;
+  font-size: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.barContent {
+  padding-left: 22px;
+  padding-right: 22px;
+  font-size: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.bar_00 .barContent {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
+
+#pinyinId {
+  padding-top: 16px;
+}
+
+.svgShowClass {
+  display: flex;
+  display: -webkit-flex;
+  /* flex-direction: row;  */
+  justify-content: space-around;
+  align-items: center;
+  /* 由于换行显得太丑了，所以不使用 */
+  flex-wrap: wrap;
+}

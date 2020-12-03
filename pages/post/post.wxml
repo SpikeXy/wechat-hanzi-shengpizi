@@ -1,0 +1,338 @@
+<view class="page">
+
+  <view class="waitViewClass"  style="display:{{waitImageCss}}">
+    <image src="//hanzitw-svg09.oss-cn-beijing.aliyuncs.com/0da318dc-dae5-4233-a739-d956c26add76.svg" mode="widthFix" />
+    <image src="//hanzitw-svg09.oss-cn-beijing.aliyuncs.com/7faeab1f-c06d-4b19-a8ff-2c60f17df6ac.svg" mode="widthFix" />
+  </view>
+  <view class="waitTextClass"   style="display:{{waitImageCss}}">
+    <view class="waitTextCenter">请稍等</view>
+    <view class="waitTextCenter">Please wait</view>
+    <view class="waitTextCenter">Warten</view>
+    <view class="waitTextCenter">ちょっと待ってください。</view>
+    <view class="waitTextCenter">Un instant.</view>
+  </view>
+  <view class="bar_00 commonBar" style="background-color:{{bar_00_color}}" wx:if="{{item.ImageFileKey.length>0}}">
+    <view class="barTitle">
+      基本信息 :
+    </view>
+    <view class="barContent">
+      <view class="bar_00_Left">
+        <view id="pinyinId">拼音 : {{item.PinYin}}</view>
+        <view>部首 : {{item.BuShou}}</view>
+      </view>
+      <view class="bar_00_Right">
+        <view wx:if="{{item.ImageFileKey.length>0}}">
+          <!-- 文字图像 : -->
+          <image class="imageLikeClass" src="{{ossUrl}}{{item.ImageFileKey}}{{suffix}}" mode="widthFix" />
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+
+
+  <view class="bar_01 commonBar" style="background-color:{{bar_01_color}}" wx:if="{{item.BiHuaOriginal.length>0}}">
+    <view class="barTitle">
+      笔画顺序 :
+    </view>
+    <view class="barContent">
+      {{item.BiHuaOriginal}}
+    </view>
+  </view>
+
+
+  <view class="bar_02 commonBar" style="background-color:{{bar_02_color}}" wx:if="{{item.JiBenJieShi.length>0}}">
+    <view class="barTitle">
+      基本解释 :
+    </view>
+    <view class="barContent">
+      {{item.JiBenJieShi}}</view>
+  </view>
+
+
+
+
+  <view class="bar_03 commonBar" style="background-color:{{bar_03_color}}" wx:if="{{item.FanQie.length>0}}">
+    <view>反切 : {{item.FanQie}}</view>
+  </view>
+
+
+  <view class="bar_04 commonBar" style="background-color:{{bar_04_color}}" wx:if="{{item.KangXiZiDian.length>0}}">
+    <view class="barTitle">康熙字典 :
+    </view>
+    <view class="barContent">
+      {{item.KangXiZiDian}}</view>
+  </view>
+
+
+  <view class="bar_05 commonBar" style="background-color:{{bar_05_color}}" wx:if="{{item.ShuoWenJieZi.length>0}}">
+    <view class="barTitle">说文解字 :
+    </view>
+    <view class="barContent">
+      {{item.ShuoWenJieZi}}</view>
+  </view>
+
+
+  <view class="bar_06 commonBar" style="background-color:{{bar_06_color}}" wx:if="{{item.SongBenGuangYun.length>0}}">
+    <view class="barTitle">宋本广韵 :
+    </view>
+    <view class="barContent">
+      {{item.SongBenGuangYun}}</view>
+  </view>
+
+
+  <view class="bar_07 commonBar" style="background-color:{{bar_07_color}}" wx:if="{{item.ZiDianChuChu.length>0}}">
+    <view class="barTitle">字典出处 :
+    </view>
+    <view class="barContent">
+      {{item.ZiDianChuChu}}</view>
+  </view>
+
+
+  <view class="bar_08 commonBar" style="background-color:{{bar_08_color}}" wx:if="{{item.ZiYuan.length>0}}">
+    <view class="barTitle">字源 :
+    </view>
+    <view class="barContent svgShowClass">
+      {{item.ZiYuan}}</view>
+  </view>
+
+
+  <view class="bar_09 commonBar" style="background-color:{{bar_09_color}}" wx:if="{{item.ChuXiWenZiImage.length>0}}">
+    <view class="barTitle">
+      楚系文字 :
+    </view>
+    <view class="barContent svgShowClass">
+      <!-- {{item.ChuXiWenZiImage}} -->
+      <image class="imageLikeClass" src="{{ossUrl}}{{item.ChuXiWenZiImage}}{{suffix}}" mode="widthFix" />
+    </view>
+  </view>
+
+
+  <view class="bar_10 commonBar" style="background-color:{{bar_10_color}}" wx:if="{{item.XiaoZhuanLeiBie.length>0}}">
+    <view class="barTitle">
+      小篆类别 :
+    </view>
+    <view class="barContent">
+      {{item.XiaoZhuanLeiBie}}
+    </view>
+  </view>
+
+
+  <view class="bar_11 commonBar" style="background-color:{{bar_11_color}}" wx:if="{{item.XiaoZhuanImage.length>0}}">
+    <view class="barTitle">
+      小篆 :
+    </view>
+    <view class="barContent svgShowClass">
+      <!-- {{item.XiaoZhuanImage}} -->
+      <image class="imageLikeClass" src="{{ossUrl}}{{item.XiaoZhuanImage}}{{suffix}}" mode="widthFix" />
+    </view>
+  </view>
+
+  <view class="bar_12 commonBar" style="background-color:{{bar_12_color}}" wx:if="{{item.JinWenImage.length>0}}">
+    <view class="barTitle">
+      金文 :
+    </view>
+    <view class="barContent svgShowClass">
+      <!--  {{item.JinWenImage}} -->
+      <image class="imageLikeClass" src="{{ossUrl}}{{item.JinWenImage}}{{suffix}}" mode="widthFix" />
+    </view>
+  </view>
+
+
+  <view class="bar_13 commonBar" style="background-color:{{bar_13_color}}" wx:if="{{item.JinWenQiMingImage.length>0}}">
+    <view class="barTitle">
+      金文器名 :
+    </view>
+    <view class="barContent svgShowClass">
+      <!--  {{item.JinWenImage}} -->
+      <image class="imageLikeClass" src="{{ossUrl}}{{item.JinWenQiMingImage}}{{suffix}}" mode="widthFix" />
+    </view>
+  </view>
+
+
+  <view class="bar_14 commonBar" style="background-color:{{bar_14_color}}" wx:if="{{item.JiaGuWenImage.length>0}}">
+    <view class="barTitle">
+      甲骨文 :
+    </view>
+    <view class="barContent svgShowClass">
+      <!--  {{item.JinWenImage}} -->
+      <image class="imageLikeClass" src="{{ossUrl}}{{item.JiaGuWenImage}}{{suffix}}" mode="widthFix" />
+    </view>
+  </view>
+
+
+  <view class="bar_15 commonBar" style="background-color:{{bar_15_color}}" wx:if="{{item.YiXieZiImage.length>0}}">
+    <view class="barTitle">异写字 :
+    </view>
+    <view class="barContent svgShowClass">
+      <view class="imageContainerViewClass" wx:for="{{item.YiXieZiImage}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+
+  <view class="bar_16 commonBar" style="background-color:{{bar_16_color}}" wx:if="{{item.YiTiZiImage.length>0}}">
+    <view class="barTitle">异体字 :
+    </view>
+    <view class="barContent svgShowClass">
+      <view class="imageContainerViewClass" wx:for="{{item.YiTiZiImage}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+
+  <view class="bar_17 commonBar" style="background-color:{{bar_17_color}}" wx:if="{{item.BuJianXuImage.length>0}}">
+    <view class="barTitle">
+      <!-- 部件序图像: -->
+      部件：
+    </view>
+    <view class="barContent svgShowClass">
+      <view wx:for="{{item.BuJianXuImage}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+
+  <view class="bar_17 commonBar" style="background-color:{{bar_17_color}}" wx:elif="{{item.BuJianXuImage2.length>0}}">
+    <view class="barTitle">
+      部件:
+    </view>
+    <view class="barContent svgShowClass">
+      <view wx:for="{{item.BuJianXuImage2}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+
+  <view class="bar_18 commonBar" style="background-color:{{bar_18_color}}" wx:if="{{item.ZiGenXuImage.length>0}}">
+    <view class="barTitle">字根 :
+    </view>
+    <view class="barContent svgShowClass">
+      <view class="imageContainerViewClass" style="width:{{littleRectWidth}}px" wx:for="{{item.ZiGenXuImage}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+
+  <view class="bar_18 commonBar" style="background-color:{{bar_18_color}}" wx:elif="{{item.ZiGenXuImag2.length>0}}">
+    <view class="barTitle">字根 :
+    </view>
+    <view class="barContent  svgShowClass">
+      <view class="imageContainerViewClass"  style="width:{{littleRectWidth}}px"  wx:for="{{item.ZiGenXuImage2}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+
+  <!-- <view class="bar_19 commonBar" style="background-color:{{bar_19_color}}" wx:if="{{item.ZiGenZuImage.length>0}}">
+    <view class="barTitle">字根组 :
+    </view>
+    <view class="barContent svgShowClass">
+
+      <view wx:for="{{item.ZiGenZuImage}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view> -->
+
+
+  <!-- <view class="bar_19 commonBar" style="background-color:{{bar_19_color}}" wx:elif="{{item.ZiGenZuImage2.length>0}}">
+    <view class="barTitle">字根组 :
+    </view>
+    <view class="barContent svgShowClass">
+     
+      <view wx:for="{{item.ZiGenZuImage2}}" wx:key="idx" wx:for-item="item" data-topic="{{item}}">
+        <image class="imageLikeClass" src="{{ossUrl}}{{item}}{{suffix}}" mode="widthFix" />
+      </view>
+    </view>
+  </view> -->
+
+  <view class="bar_19" style="background-color:{{bar_19_color}}" wx:if="{{bar_19_color.length>0}}">
+
+    <view class="barTitle">索引 :
+    </view>
+    <view class="SuoYinContent">
+
+
+
+      <view class="commonBar" wx:if="{{item.ZhongWenDaCiDianSuoYin.length>0}}">
+        <view>中文大辞典索引 : {{item.ZhongWenDaCiDianSuoYin }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.ZhongWenDaCiDianBuShou.length>0}}">
+        <view>中文大辞典部首 : {{item.ZhongWenDaCiDianBuShou }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.CangJie.length>0}}">
+        <view>仓颉 : {{item.CangJie }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.KangXiZiDianSuoYin.length>0}}">
+        <view>康熙字典索引 : {{item.KangXiZiDianSuoYin }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.JianHongHanYuDaZiDian.length>0}}">
+        <view>建宏汉语大字典 : {{item.JianHongHanYuDaZiDian }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.HanYuDaZiDian.length>0}}">
+        <view>汉语大字典 : {{item.HanYuDaZiDian }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.GuangYunSuoYin.length>0}}">
+        <view>广韵索引 : {{item.GuangYunSuoYin }}</view>
+      </view>
+
+
+      <view class="commonBar" wx:if="{{item.YuDongHanYuDaZiDian.length>0}}">
+        <view>远东汉语大字典 : {{item.YuDongHanYuDaZiDian }}</view>
+      </view>
+    </view>
+
+    <view  style="display:flex;justify-content:center;background-color:{{bar_20_color}}"  >
+        <image style="width:200px;height:200px;" src="{{qrImageUrl}}" mode="widthFix" />
+    </view>
+
+
+
+     <view>
+      <button class="genButton"
+      disabled="{{btnDisabled}}"
+       id="generateQrCodeId" 
+      data-pinyin="{{item.PinYin}}" 
+      data-bushou="{{item.BuShou}}" 
+      data-fontUrl="{{item.ImageFileKey}}" 
+      data-jibenjieshi="{{item.JiBenJieShi}}"
+      bindtap="shareToFriends">点击生成二维码分享</button>
+    </view> 
+
+     <canvas canvas-id="shareCanvasId" style="width:350px;height:700px"   hidden='true'   ></canvas> 
+
+   <view>
+      <ad unit-id="adunit-0a3325454f3ce873"></ad>
+    </view>
+  </view>
+
+  <!-- <view wx:if="{{!showUploadButton}}">
+    <image class="imageLikeClass" src="{{imageLikePath}}" mode="widthFix" />
+  </view> -->
+</view>
+<!-- <view >
+  <view wx:if="{{showUploadButton}}" class='tijiao_button'>
+    <button bindtap="chooseImageTap"  type="primary" formType="submit">上传图片</button>
+  </view>
+</view> -->

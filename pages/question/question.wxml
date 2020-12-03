@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="page_head_title">在线留言</view>
+  <form bindsubmit="bindFormSubmit">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+
+          <textarea auto-focus='true' name="textarea" value="{{inputWords}}" class="weui-textarea" placeholder="欢迎留言，我在听" style="height: 8.3em" maxlength="800" bindinput='changeInputLengthDisplay' id="inputTextArea" >
+          </textarea>
+             <view class="weui-textarea-counter">{{inputWordsLength}}/800</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="tijiao_button">
+      <button class="weui-btn" type="primary" form-type="submit">提交</button>
+    </view>
+  </form>
+  <view class="middle">
+  {{alertWord}}
+  </view>
+</view>

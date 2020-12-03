@@ -1,0 +1,48 @@
+<view class="rootViewClass">
+  <view class="weui-cells__title">请输入</view>
+  <form bindsubmit="bindFormSubmit">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea auto-focus='true' name="textarea" value="{{inputWords}}" class="weui-textarea" placeholder="火火火-->焱" style="height: 3.3em" maxlength="200" bindinput='changeInputLengthDisplay' />
+          <view class="weui-textarea-counter">{{inputWordsLength}}/200</view>
+        </view>
+      </view>
+    </view>
+    <view class="tijiao_button">
+      <button class="weui-btn" type="primary" form-type="submit">提交</button>
+    </view>
+  </form>
+
+
+  <view wx:if="{{showBackWords}}">
+    <view wx:for="{{backWords}}" wx:for-index="idx" wx:key="Id" wx:for-item="item" data-topic="{{item}}" bindtap="showDetail" >
+      
+      <view class="hanziWordCard">
+        <view class='noshow'>id:{{item.Id}}</view>
+        <view class="leftPart">
+          <view>拼音 : {{item.PinYin}}</view>
+          <view>部首 : {{item.BuShou}}</view>
+        </view>
+        <view class="rightPart">
+          <image src="{{ossUrl}}{{item.ImageFileKey}}{{suffix}}" class="hanziImage" mode='widthFix' bindtap='clickHanZiImage(item.Id)'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{!showBackWords}}" class="discription">
+
+    <text decode="{{true}}">&ensp;&ensp;&ensp;&ensp;{{descriptionText}}</text>
+  </view>
+  <view>
+
+
+  </view>
+  <view wx:if="{{showDetailView}}">
+    {{showDetailContent}}
+  </view>
+
+  <canvas canvas-id="shareCanvas" style="width:600px;height:900px"></canvas>
+
+
+</view>
